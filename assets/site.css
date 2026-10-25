@@ -49,7 +49,7 @@ p{margin:0;max-width:65ch;text-wrap:pretty}
 .site-head .wrap{height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .wordmark{font-family:"Space Grotesk";font-weight:700;font-size:19px;letter-spacing:-.02em;color:var(--ink);text-decoration:none;white-space:nowrap}
 .wordmark:hover{color:var(--ink)}
-.wordmark span{display:inline-block;width:18px;height:1px;background:var(--gold);vertical-align:middle;margin-left:10px}
+.wordmark span{display:inline-block;width:18px;height:1px;background:var(--primary);vertical-align:middle;margin-left:10px}
 .nav{display:flex;gap:clamp(16px,2.6vw,36px);list-style:none;margin:0;padding:0}
 .nav a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s}
 .nav a:hover{border-color:var(--ink)}
