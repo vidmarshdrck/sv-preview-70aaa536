@@ -1,0 +1,15 @@
+{
+  "source_sha": "33b807256451a78543b8c2a4c92b2bac430cc248",
+  "base": "/sv-preview-70aaa536/",
+  "build_command": "python3 build.py --base /sv-preview-70aaa536/",
+  "local_build_adjustment": "Literal footer Powered by VIDM\u039bR; source branch not modified",
+  "build_script_sha256": "43e47f0294499af61eeb2c975a0e900c5122db7d09605dbde15db4f70e10bb07",
+  "files": {
+    "index.html": "3dc96b08baedc9c63ef71196dc06d6c97bc4778c0f5d5f593528cc6fcb16bcce",
+    "assets/site.css": "ebb8db4c88c1e483331008bb0c192e84dbccf133104d42e8d207a9cc2ad425d5",
+    "assets/site.js": "20663354eda46ff934e5f4dc85a03c55dcccaff2e0ff94c93922d105bde24c6c",
+    "photos/portraits/about.webp": "dbe5c0c4012c77733254d9f94570f2a078da116875149b1210db868586a9354c",
+    "photos/portraits/career-temple.webp": "8f528deaa30006c02ac7c8fecd72ca166840fa39f7822bf02b5b7fe101535837",
+    "photos/portraits/hero-tie.webp": "fa736c7a9fba4dda3bd088bb269dce97b797929e8e0513cb3044dc1f07262374"
+  }
+}
