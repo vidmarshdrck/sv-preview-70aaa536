@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#E10600">
+<title>Request a meeting — Shadrick Vidmar</title>
+<meta name="description" content="Request a meeting with Shadrick Vidmar. A request waits for his approval and is not sent from this page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,800;1,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/sv-preview-70aaa536/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="page-head">
+  <div class="hero-bar">
+    <a class="page-mark" href="/sv-preview-70aaa536/">Shadrick Vidmar</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul><li><a href="/sv-preview-70aaa536/">Home</a></li><li><a href="/sv-preview-70aaa536/about/">About me</a></li><li><a href="/sv-preview-70aaa536/career/">Career</a></li><li><a href="/sv-preview-70aaa536/work/">Work</a></li><li><a href="/sv-preview-70aaa536/appointment/" aria-current="page">Appointment</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<article class="page">
+  <h1>Request a meeting</h1>
+  <p class="note">I read each request and accept or decline it myself. The date and time you choose are what you are asking for. They do not hold a slot, and they are not a list of open times.</p>
+  <p class="note">This page checks the form in your browser. It does not send a message, create a calendar event, or notify me. A request is not delivered until a private intake step is connected.</p>
+  <noscript><p class="note">JavaScript is off, so this page cannot check the form. It still cannot send a request or create a calendar event.</p></noscript>
+  <div id="request-errors" class="error-summary" role="alert" tabindex="-1" hidden></div>
+  <form id="meeting-request" class="appt" novalidate>
+    <div class="appt-layout">
+      <fieldset class="cal-field">
+        <legend>Requested date</legend>
+        <div class="cal" data-calendar>
+          <div class="cal-bar">
+            <button type="button" data-cal-prev>Prev</button>
+            <p id="cal-label" class="cal-label" aria-live="polite"></p>
+            <button type="button" data-cal-next>Next</button>
+          </div>
+          <table class="cal-grid" role="grid" aria-labelledby="cal-label">
+            <thead>
+              <tr>
+                <th scope="col"><span aria-hidden="true">Mon</span><span class="sr-only">Monday</span></th>
+                <th scope="col"><span aria-hidden="true">Tue</span><span class="sr-only">Tuesday</span></th>
+                <th scope="col"><span aria-hidden="true">Wed</span><span class="sr-only">Wednesday</span></th>
+                <th scope="col"><span aria-hidden="true">Thu</span><span class="sr-only">Thursday</span></th>
+                <th scope="col"><span aria-hidden="true">Fri</span><span class="sr-only">Friday</span></th>
+                <th scope="col"><span aria-hidden="true">Sat</span><span class="sr-only">Saturday</span></th>
+                <th scope="col"><span aria-hidden="true">Sun</span><span class="sr-only">Sunday</span></th>
+              </tr>
+            </thead>
+            <tbody data-cal-grid></tbody>
+          </table>
+        </div>
+        <p id="request-date-display" class="chosen" aria-live="polite">No date chosen</p>
+        <p id="request-date-error" class="err" hidden></p>
+        <input type="hidden" id="request-date" name="date" value="">
+      </fieldset>
+      <div>
+        <div class="field">
+          <label for="request-name">Your name</label>
+          <input id="request-name" name="name" type="text" autocomplete="name" maxlength="80" aria-describedby="request-name-error">
+          <p id="request-name-error" class="err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="request-email">Email</label>
+          <input id="request-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="120" aria-describedby="request-email-error">
+          <p id="request-email-error" class="err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="request-time">Requested time</label>
+          <input id="request-time" name="time" type="time" step="60" autocomplete="off" aria-describedby="request-time-hint request-time-error">
+          <p id="request-time-hint" class="hint">Clock time in the timezone below.</p>
+          <p id="request-time-error" class="err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="request-zone">Timezone</label>
+          <select id="request-zone" name="timeZone" aria-describedby="request-zone-offset request-zone-error">
+            <option value="Africa/Lusaka">Africa/Lusaka</option>
+          </select>
+          <p id="request-zone-offset" class="hint"></p>
+          <p id="request-zone-error" class="err" hidden></p>
+        </div>
+        <div class="field">
+          <label for="request-purpose">Meeting purpose</label>
+          <textarea id="request-purpose" name="purpose" rows="5" maxlength="800" aria-describedby="request-purpose-error"></textarea>
+          <p id="request-purpose-error" class="err" hidden></p>
+        </div>
+        <button type="button" class="submit" id="request-submit">Submit request</button>
+      </div>
+    </div>
+  </form>
+  <div id="request-status" class="result" role="status" aria-live="polite" tabindex="-1" hidden>
+    <h2>Not sent</h2>
+    <p id="request-status-text">No message was delivered and no calendar event was created. This is not an accepted meeting. The details stay in this browser only.</p>
+    <dl class="summary" id="request-summary"></dl>
+  </div>
+</article>
+</main>
+<footer class="site-foot" id="contact">
+  <div class="wrap foot-top">
+    <p class="ask">Have a question? <a href="/sv-preview-70aaa536/appointment/">Request a meeting</a></p>
+    <nav aria-label="Footer"><ul><li><a href="/sv-preview-70aaa536/">Home</a></li><li><a href="/sv-preview-70aaa536/about/">About me</a></li><li><a href="/sv-preview-70aaa536/career/">Career</a></li><li><a href="/sv-preview-70aaa536/work/">Work</a></li><li><a href="/sv-preview-70aaa536/appointment/" aria-current="page">Appointment</a></li></ul></nav>
+  </div>
+  <div class="wrap foot-base">
+    <p class="copy">&copy; 2026 Shadrick Vidmar</p>
+    <ul class="foot-social"><li><a class="foot-soc" href="https://instagram.com/shadrickvidmar" rel="me noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 1.6a2.2 2.2 0 1 0 2.2 2.2A2.2 2.2 0 0 0 12 9.8zM17.4 6.4a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg></a></li><li><a class="foot-soc" href="https://www.linkedin.com/in/shadrick-vidmar-277316229" rel="me noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.5 9H4V20h2.5zM5.2 4A1.6 1.6 0 1 0 5.2 7.2 1.6 1.6 0 0 0 5.2 4zM20 20h-2.5v-5.6c0-1.8-.8-2.4-1.8-2.4s-2 .9-2 2.5V20H11V9h2.4v1.5c.5-.8 1.6-1.8 3.3-1.8 2.2 0 3.3 1.4 3.3 4.2z"/></svg></a></li><li><a class="foot-soc" href="https://x.com/vidmar_shdrck" rel="me noopener noreferrer" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14.6 3h3.1l-6.8 7.8L19 21h-4.8l-3.8-5-4.3 5H3l7.3-8.4L3.4 3h4.9l3.4 4.6L14.6 3zm-1.1 16.2h1.7L8.5 4.7H6.7l6.8 14.5z"/></svg></a></li></ul>
+    <p class="powered-by">Powered by <span class="vidmar-mark" role="img" aria-label="VIDMAR"><span aria-hidden="true">VIDM</span><svg class="vidmar-lambda" aria-hidden="true" viewBox="0 0 28 26" focusable="false"><path fill="currentColor" d="M14 0.6 1 25.4h6.2L14 9.2 20.8 25.4H27L14 0.6z"/></svg><span aria-hidden="true">R</span></span></p>
+  </div>
+</footer>
+<script src="/sv-preview-70aaa536/assets/site.js" defer></script>
+
+</body>
+</html>
